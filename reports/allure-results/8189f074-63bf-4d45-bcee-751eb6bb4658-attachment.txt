@@ -1,0 +1,4 @@
+[32m2025-04-03 22:21:18.495[0m | [1mINFO    [0m | [36mapi_tests.test_users[0m:[36mtest_get_single_user_found[0m:[36m73[0m - [1mStarting test: test_get_single_user_found[0m
+[32m2025-04-03 22:21:18.893[0m | [1mINFO    [0m | [36mapi_tests.test_users[0m:[36mtest_get_single_user_found[0m:[36m80[0m - [1mAsserting status code: expected=200, actual=200[0m
+[32m2025-04-03 22:21:18.893[0m | [1mINFO    [0m | [36mapi_tests.test_users[0m:[36mtest_get_single_user_found[0m:[36m87[0m - [1mAsserting response body structure and user ID[0m
+[32m2025-04-03 22:21:18.893[0m | [1mINFO    [0m | [36mapi_tests.test_users[0m:[36mtest_get_single_user_found[0m:[36m96[0m - [1mTest test_get_single_user_found finished successfully.[0m

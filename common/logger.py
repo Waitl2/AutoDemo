@@ -1,12 +1,13 @@
 import os
 from loguru import logger
-from read_config import config
+from common.read_config import get_config
 
 def setup_logger():
     """
     配置loguru日志记录器
     """
-    log_config = config.get('logging',{})
+    config = get_config()
+    log_config = config.get('logging', {})
     log_level = log_config.get('level', 'INFO')
     log_rotation = log_config.get('rotation', '10 MB')
     log_retention = log_config.get('retention', '7 days')

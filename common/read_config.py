@@ -22,7 +22,7 @@ def get_config(config_path = None):
         print(f"读取配置文件时发生错误: {e}")
         return None
     
-    config = get_config()
+# config = get_config()
 
 # 示例：如何获取配置项
 # if __name__ == '__main__':

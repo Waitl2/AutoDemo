@@ -1,0 +1,5 @@
+[32m2025-04-03 22:21:18.064[0m | [1mINFO    [0m | [36mapi_tests.test_users[0m:[36mtest_list_users_page_2[0m:[36m21[0m - [1mStarting test: test_list_users_page_2[0m
+[32m2025-04-03 22:21:18.488[0m | [1mINFO    [0m | [36mapi_tests.test_users[0m:[36mtest_list_users_page_2[0m:[36m31[0m - [1mAsserting status code: expected=200, actual=200[0m
+[32m2025-04-03 22:21:18.489[0m | [1mINFO    [0m | [36mapi_tests.test_users[0m:[36mtest_list_users_page_2[0m:[36m39[0m - [1mAsserting response body structure[0m
+[32m2025-04-03 22:21:18.490[0m | [1mINFO    [0m | [36mapi_tests.test_users[0m:[36mtest_list_users_page_2[0m:[36m49[0m - [1mAsserting specific values in response[0m
+[32m2025-04-03 22:21:18.490[0m | [1mINFO    [0m | [36mapi_tests.test_users[0m:[36mtest_list_users_page_2[0m:[36m62[0m - [1mTest test_list_users_page_2 finished successfully.[0m
