@@ -1,0 +1,28 @@
+project_name: AutoDemo
+
+api:
+  base_url: https://api.example.com
+  timeout: 10
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  # 如果需要认证，可以添加 token 或 账号密码 (注意安全，稍后考虑更安全的处理方式)
+  # auth:
+  #   username: your_username
+  #   password: your_password
+
+# Web UI 测试配置 (需要根据你选择的目标应用修改!)
+
+web:
+  base_url: https://example.com
+  browser: chrome  # 可选值: chrome, firefox, edge, safari
+  headless: false  # 是否无头模式 (True 或 False)
+  implicit_wait: 10  # 隐式等待时间 (秒)
+  page_load_timeout: 30  # 页面加载超时时间 (秒)
+
+
+loging:
+  level: INFO # 日志级别 (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  rotation: 10 MB # 日志文件大小限制 (MB)
+  retention: 7 days # 日志保留时间 (天)
+  file:"logs/runtime.log" # 日志文件路径
