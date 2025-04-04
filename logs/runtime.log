@@ -34,3 +34,114 @@
 2025-04-03 22:21:19.654 | INFO     | api_tests.test_users:test_get_single_user_not_found:114 - Asserting status code: expected=404, actual=404
 2025-04-03 22:21:19.655 | INFO     | api_tests.test_users:test_get_single_user_not_found:119 - Asserting response body is empty
 2025-04-03 22:21:19.655 | INFO     | api_tests.test_users:test_get_single_user_not_found:128 - Test test_get_single_user_not_found finished successfully.
+2025-04-04 09:48:01.597 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 09:48:40.538 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 09:48:40.610 | INFO     | conftest:api_client:11 - --- Initializing API Client Fixture (Session Scope) ---
+2025-04-04 09:48:40.613 | INFO     | core.api_client:__init__:16 - API Client initialized with base URL: https://reqres.in/api
+2025-04-04 09:48:40.614 | INFO     | api_tests.test_users:test_list_users_page_2:21 - Starting test: test_list_users_page_2
+2025-04-04 09:48:40.916 | INFO     | api_tests.test_users:test_list_users_page_2:31 - Asserting status code: expected=200, actual=200
+2025-04-04 09:48:40.916 | INFO     | api_tests.test_users:test_list_users_page_2:39 - Asserting response body structure
+2025-04-04 09:48:40.916 | INFO     | api_tests.test_users:test_list_users_page_2:49 - Asserting specific values in response
+2025-04-04 09:48:40.916 | INFO     | api_tests.test_users:test_list_users_page_2:62 - Test test_list_users_page_2 finished successfully.
+2025-04-04 09:48:40.920 | INFO     | api_tests.test_users:test_get_single_user_found:73 - Starting test: test_get_single_user_found
+2025-04-04 09:48:41.225 | INFO     | api_tests.test_users:test_get_single_user_found:80 - Asserting status code: expected=200, actual=200
+2025-04-04 09:48:41.225 | INFO     | api_tests.test_users:test_get_single_user_found:87 - Asserting response body structure and user ID
+2025-04-04 09:48:41.225 | INFO     | api_tests.test_users:test_get_single_user_found:96 - Test test_get_single_user_found finished successfully.
+2025-04-04 09:48:41.228 | INFO     | api_tests.test_users:test_get_single_user_not_found:107 - Starting test: test_get_single_user_not_found
+2025-04-04 09:48:41.936 | INFO     | api_tests.test_users:test_get_single_user_not_found:114 - Asserting status code: expected=404, actual=404
+2025-04-04 09:48:41.936 | INFO     | api_tests.test_users:test_get_single_user_not_found:119 - Asserting response body is empty
+2025-04-04 09:48:41.936 | INFO     | api_tests.test_users:test_get_single_user_not_found:128 - Test test_get_single_user_not_found finished successfully.
+2025-04-04 09:48:41.939 | INFO     | api_tests.test_users:test_create_user:140 - Starting test: test_create_user
+2025-04-04 09:48:42.658 | INFO     | api_tests.test_users:test_create_user:155 - Asserting status code: expected=201, actual=201
+2025-04-04 09:48:42.658 | INFO     | api_tests.test_users:test_create_user:163 - Asserting response body content
+2025-04-04 09:48:42.658 | INFO     | api_tests.test_users:test_create_user:176 - User created successfully with ID: 93
+2025-04-04 09:48:42.658 | INFO     | api_tests.test_users:test_create_user:178 - Test test_create_user finished successfully.
+2025-04-04 09:48:42.661 | INFO     | conftest:api_client:17 - --- Tearing down API Client Fixture (Session Scope) ---
+2025-04-04 10:25:17.919 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 10:26:41.092 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 10:26:41.132 | ERROR    | common.read_yaml:read_yaml:26 - Error parsing YAML file D:\OneDrive\桌面\WebAutoTest\AutoDemo\data/user_creation_data.yaml: mapping values are not allowed here
+  in "D:\OneDrive\桌面\WebAutoTest\AutoDemo\data/user_creation_data.yaml", line 3, column 16
+2025-04-04 10:29:14.637 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 10:29:14.676 | ERROR    | common.read_yaml:read_yaml:26 - Error parsing YAML file D:\OneDrive\桌面\WebAutoTest\AutoDemo\data/user_creation_data.yaml: while scanning a simple key
+  in "D:\OneDrive\桌面\WebAutoTest\AutoDemo\data/user_creation_data.yaml", line 8, column 3
+could not find expected ':'
+  in "D:\OneDrive\桌面\WebAutoTest\AutoDemo\data/user_creation_data.yaml", line 10, column 1
+2025-04-04 10:30:09.040 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 10:33:13.908 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 10:33:13.952 | ERROR    | common.read_yaml:read_yaml:28 - An error occurred during path calculation or reading [{'test_id': 'TC001_create_user_leader', 'description': "Create a user with role 'leader'", 'payload': {'name': 'morpheus', 'job': 'leader'}, 'expected_status': 201, 'expected_keys': ['name', 'job', 'id', 'createdAt']}, {'test_id': 'TC002_create_user_the_one', 'description': "Create a user with role 'the one'", 'payload': {'name': 'neo', 'job': 'the one'}, 'expected_status': 201, 'expected_keys': ['name', 'job', 'id', 'createdAt']}]: join() argument must be str, bytes, or os.PathLike object, not 'list'
+2025-04-04 10:37:56.374 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 10:37:56.432 | INFO     | api_tests.test_users:<module>:9 - Loading test data from: [{'test_id': 'TC001_create_user_leader', 'description': "Create a user with role 'leader'", 'payload': {'name': 'morpheus', 'job': 'leader'}, 'expected_status': 201, 'expected_keys': ['name', 'job', 'id', 'createdAt']}, {'test_id': 'TC002_create_user_the_one', 'description': "Create a user with role 'the one'", 'payload': {'name': 'neo', 'job': 'the one'}, 'expected_status': 201, 'expected_keys': ['name', 'job', 'id', 'createdAt']}]
+2025-04-04 10:37:56.434 | ERROR    | common.read_yaml:read_yaml:28 - An error occurred during path calculation or reading [{'test_id': 'TC001_create_user_leader', 'description': "Create a user with role 'leader'", 'payload': {'name': 'morpheus', 'job': 'leader'}, 'expected_status': 201, 'expected_keys': ['name', 'job', 'id', 'createdAt']}, {'test_id': 'TC002_create_user_the_one', 'description': "Create a user with role 'the one'", 'payload': {'name': 'neo', 'job': 'the one'}, 'expected_status': 201, 'expected_keys': ['name', 'job', 'id', 'createdAt']}]: join() argument must be str, bytes, or os.PathLike object, not 'list'
+2025-04-04 10:37:56.435 | ERROR    | api_tests.test_users:<module>:15 - FATAL: Failed to load test data from [{'test_id': 'TC001_create_user_leader', 'description': "Create a user with role 'leader'", 'payload': {'name': 'morpheus', 'job': 'leader'}, 'expected_status': 201, 'expected_keys': ['name', 'job', 'id', 'createdAt']}, {'test_id': 'TC002_create_user_the_one', 'description': "Create a user with role 'the one'", 'payload': {'name': 'neo', 'job': 'the one'}, 'expected_status': 201, 'expected_keys': ['name', 'job', 'id', 'createdAt']}]. Skipping dependent tests.
+2025-04-04 10:37:56.442 | INFO     | conftest:api_client:11 - --- Initializing API Client Fixture (Session Scope) ---
+2025-04-04 10:37:56.445 | INFO     | core.api_client:__init__:16 - API Client initialized with base URL: https://reqres.in/api
+2025-04-04 10:37:56.446 | INFO     | api_tests.test_users:test_list_users_page_2:42 - Starting test: test_list_users_page_2
+2025-04-04 10:37:56.746 | INFO     | api_tests.test_users:test_list_users_page_2:52 - Asserting status code: expected=200, actual=200
+2025-04-04 10:37:56.747 | INFO     | api_tests.test_users:test_list_users_page_2:60 - Asserting response body structure
+2025-04-04 10:37:56.748 | INFO     | api_tests.test_users:test_list_users_page_2:70 - Asserting specific values in response
+2025-04-04 10:37:56.749 | INFO     | api_tests.test_users:test_list_users_page_2:83 - Test test_list_users_page_2 finished successfully.
+2025-04-04 10:37:56.751 | INFO     | api_tests.test_users:test_get_single_user_found:94 - Starting test: test_get_single_user_found
+2025-04-04 10:37:57.052 | INFO     | api_tests.test_users:test_get_single_user_found:101 - Asserting status code: expected=200, actual=200
+2025-04-04 10:37:57.053 | INFO     | api_tests.test_users:test_get_single_user_found:108 - Asserting response body structure and user ID
+2025-04-04 10:37:57.054 | INFO     | api_tests.test_users:test_get_single_user_found:117 - Test test_get_single_user_found finished successfully.
+2025-04-04 10:37:57.055 | INFO     | api_tests.test_users:test_get_single_user_not_found:128 - Starting test: test_get_single_user_not_found
+2025-04-04 10:37:57.849 | INFO     | api_tests.test_users:test_get_single_user_not_found:135 - Asserting status code: expected=404, actual=404
+2025-04-04 10:37:57.850 | INFO     | api_tests.test_users:test_get_single_user_not_found:140 - Asserting response body is empty
+2025-04-04 10:37:57.850 | INFO     | api_tests.test_users:test_get_single_user_not_found:149 - Test test_get_single_user_not_found finished successfully.
+2025-04-04 10:37:57.853 | INFO     | conftest:api_client:17 - --- Tearing down API Client Fixture (Session Scope) ---
+2025-04-04 10:40:54.947 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 10:40:55.002 | INFO     | api_tests.test_users:<module>:9 - Loading test data from: data/user_creation_data.yaml
+2025-04-04 10:40:55.014 | INFO     | conftest:api_client:11 - --- Initializing API Client Fixture (Session Scope) ---
+2025-04-04 10:40:55.017 | INFO     | core.api_client:__init__:16 - API Client initialized with base URL: https://reqres.in/api
+2025-04-04 10:40:55.017 | INFO     | api_tests.test_users:test_list_users_page_2:42 - Starting test: test_list_users_page_2
+2025-04-04 10:40:55.317 | INFO     | api_tests.test_users:test_list_users_page_2:52 - Asserting status code: expected=200, actual=200
+2025-04-04 10:40:55.318 | INFO     | api_tests.test_users:test_list_users_page_2:60 - Asserting response body structure
+2025-04-04 10:40:55.318 | INFO     | api_tests.test_users:test_list_users_page_2:70 - Asserting specific values in response
+2025-04-04 10:40:55.318 | INFO     | api_tests.test_users:test_list_users_page_2:83 - Test test_list_users_page_2 finished successfully.
+2025-04-04 10:40:55.320 | INFO     | api_tests.test_users:test_get_single_user_found:94 - Starting test: test_get_single_user_found
+2025-04-04 10:40:55.621 | INFO     | api_tests.test_users:test_get_single_user_found:101 - Asserting status code: expected=200, actual=200
+2025-04-04 10:40:55.622 | INFO     | api_tests.test_users:test_get_single_user_found:108 - Asserting response body structure and user ID
+2025-04-04 10:40:55.622 | INFO     | api_tests.test_users:test_get_single_user_found:117 - Test test_get_single_user_found finished successfully.
+2025-04-04 10:40:55.625 | INFO     | api_tests.test_users:test_get_single_user_not_found:128 - Starting test: test_get_single_user_not_found
+2025-04-04 10:40:55.943 | INFO     | api_tests.test_users:test_get_single_user_not_found:135 - Asserting status code: expected=404, actual=404
+2025-04-04 10:40:55.944 | INFO     | api_tests.test_users:test_get_single_user_not_found:140 - Asserting response body is empty
+2025-04-04 10:40:55.944 | INFO     | api_tests.test_users:test_get_single_user_not_found:149 - Test test_get_single_user_not_found finished successfully.
+2025-04-04 10:40:55.946 | INFO     | api_tests.test_users:test_create_user_data_driven:170 - Starting test: Create a user with role 'leader'
+2025-04-04 10:40:56.634 | INFO     | api_tests.test_users:test_create_user_data_driven:183 - Asserting status code: expected=201, actual=201
+2025-04-04 10:40:56.635 | INFO     | api_tests.test_users:test_create_user_data_driven:199 - Asserting successful response body
+2025-04-04 10:40:56.635 | INFO     | api_tests.test_users:test_create_user_data_driven:209 - User 'morpheus' seems to be created successfully. ID: 312
+2025-04-04 10:40:56.636 | INFO     | api_tests.test_users:test_create_user_data_driven:230 - Test 'Create a user with role 'leader'' finished.
+2025-04-04 10:40:56.638 | INFO     | api_tests.test_users:test_create_user_data_driven:170 - Starting test: Create a user with role 'the one'
+2025-04-04 10:40:57.311 | INFO     | api_tests.test_users:test_create_user_data_driven:183 - Asserting status code: expected=201, actual=201
+2025-04-04 10:40:57.312 | INFO     | api_tests.test_users:test_create_user_data_driven:199 - Asserting successful response body
+2025-04-04 10:40:57.313 | INFO     | api_tests.test_users:test_create_user_data_driven:209 - User 'neo' seems to be created successfully. ID: 441
+2025-04-04 10:40:57.313 | INFO     | api_tests.test_users:test_create_user_data_driven:230 - Test 'Create a user with role 'the one'' finished.
+2025-04-04 10:40:57.314 | INFO     | conftest:api_client:17 - --- Tearing down API Client Fixture (Session Scope) ---
+2025-04-04 10:43:04.566 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 10:43:04.626 | INFO     | api_tests.test_users:<module>:9 - Loading test data from: data/user_creation_data.yaml
+2025-04-04 10:43:04.637 | INFO     | conftest:api_client:11 - --- Initializing API Client Fixture (Session Scope) ---
+2025-04-04 10:43:04.640 | INFO     | core.api_client:__init__:16 - API Client initialized with base URL: https://reqres.in/api
+2025-04-04 10:43:04.642 | INFO     | api_tests.test_users:test_list_users_page_2:42 - Starting test: test_list_users_page_2
+2025-04-04 10:43:04.973 | INFO     | api_tests.test_users:test_list_users_page_2:52 - Asserting status code: expected=200, actual=200
+2025-04-04 10:43:04.974 | INFO     | api_tests.test_users:test_list_users_page_2:60 - Asserting response body structure
+2025-04-04 10:43:04.975 | INFO     | api_tests.test_users:test_list_users_page_2:70 - Asserting specific values in response
+2025-04-04 10:43:04.975 | INFO     | api_tests.test_users:test_list_users_page_2:83 - Test test_list_users_page_2 finished successfully.
+2025-04-04 10:43:04.978 | INFO     | api_tests.test_users:test_get_single_user_found:94 - Starting test: test_get_single_user_found
+2025-04-04 10:43:05.284 | INFO     | api_tests.test_users:test_get_single_user_found:101 - Asserting status code: expected=200, actual=200
+2025-04-04 10:43:05.285 | INFO     | api_tests.test_users:test_get_single_user_found:108 - Asserting response body structure and user ID
+2025-04-04 10:43:05.285 | INFO     | api_tests.test_users:test_get_single_user_found:117 - Test test_get_single_user_found finished successfully.
+2025-04-04 10:43:05.287 | INFO     | api_tests.test_users:test_get_single_user_not_found:128 - Starting test: test_get_single_user_not_found
+2025-04-04 10:43:06.052 | INFO     | api_tests.test_users:test_get_single_user_not_found:135 - Asserting status code: expected=404, actual=404
+2025-04-04 10:43:06.054 | INFO     | api_tests.test_users:test_get_single_user_not_found:140 - Asserting response body is empty
+2025-04-04 10:43:06.055 | INFO     | api_tests.test_users:test_get_single_user_not_found:149 - Test test_get_single_user_not_found finished successfully.
+2025-04-04 10:43:06.058 | INFO     | api_tests.test_users:test_create_user_data_driven:170 - Starting test: Create a user with role 'leader'
+2025-04-04 10:43:06.782 | INFO     | api_tests.test_users:test_create_user_data_driven:183 - Asserting status code: expected=201, actual=201
+2025-04-04 10:43:06.783 | INFO     | api_tests.test_users:test_create_user_data_driven:199 - Asserting successful response body
+2025-04-04 10:43:06.784 | INFO     | api_tests.test_users:test_create_user_data_driven:209 - User 'morpheus' seems to be created successfully. ID: 779
+2025-04-04 10:43:06.784 | INFO     | api_tests.test_users:test_create_user_data_driven:230 - Test 'Create a user with role 'leader'' finished.
+2025-04-04 10:43:06.787 | INFO     | api_tests.test_users:test_create_user_data_driven:170 - Starting test: Create a user with role 'the one'
+2025-04-04 10:43:07.513 | INFO     | api_tests.test_users:test_create_user_data_driven:183 - Asserting status code: expected=201, actual=201
+2025-04-04 10:43:07.513 | INFO     | api_tests.test_users:test_create_user_data_driven:199 - Asserting successful response body
+2025-04-04 10:43:07.513 | INFO     | api_tests.test_users:test_create_user_data_driven:209 - User 'neo' seems to be created successfully. ID: 576
+2025-04-04 10:43:07.514 | INFO     | api_tests.test_users:test_create_user_data_driven:230 - Test 'Create a user with role 'the one'' finished.
+2025-04-04 10:43:07.516 | INFO     | conftest:api_client:17 - --- Tearing down API Client Fixture (Session Scope) ---

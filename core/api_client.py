@@ -69,4 +69,4 @@ class ApiClient:
 
 # 创建一个实例，方便其他模块导入后直接使用
 # 如果希望每次使用都是新实例，可以在 fixture 中创建
-api_client = ApiClient()
+# api_client = ApiClient()

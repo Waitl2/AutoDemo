@@ -1,0 +1,16 @@
+# data/user_creation_data.yaml
+- test_id: TC001_create_user_leader
+  description: "Create a user with role 'leader'"
+  payload: 
+    name: "morpheus" 
+    job: "leader"   
+  expected_status: 201
+  expected_keys: ['name', 'job', 'id', 'createdAt']
+
+- test_id: TC002_create_user_the_one
+  description: "Create a user with role 'the one'"
+  payload:
+    name: "neo"
+    job: "the one"
+  expected_status: 201
+  expected_keys: ['name', 'job', 'id', 'createdAt']
