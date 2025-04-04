@@ -145,3 +145,648 @@ could not find expected ':'
 2025-04-04 10:43:07.513 | INFO     | api_tests.test_users:test_create_user_data_driven:209 - User 'neo' seems to be created successfully. ID: 576
 2025-04-04 10:43:07.514 | INFO     | api_tests.test_users:test_create_user_data_driven:230 - Test 'Create a user with role 'the one'' finished.
 2025-04-04 10:43:07.516 | INFO     | conftest:api_client:17 - --- Tearing down API Client Fixture (Session Scope) ---
+2025-04-04 11:01:31.307 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 11:01:31.366 | INFO     | api_tests.test_users:<module>:16 - Loading test data from: data/user_creation_data.yaml
+2025-04-04 11:01:31.380 | INFO     | conftest:api_client:11 - --- Initializing API Client Fixture (Session Scope) ---
+2025-04-04 11:01:31.383 | INFO     | core.api_client:__init__:16 - API Client initialized with base URL: https://reqres.in/api
+2025-04-04 11:01:31.385 | INFO     | api_tests.test_users:test_list_users_page_2:49 - Starting test: test_list_users_page_2
+2025-04-04 11:01:31.806 | INFO     | common.assertions:assert_status_code:15 - Verify response status code is 200
+2025-04-04 11:01:31.806 | INFO     | common.assertions:assert_json_keys_exist:54 - Verify JSON contains keys: ['page', 'per_page', 'total', 'total_pages', 'data']
+2025-04-04 11:01:31.806 | INFO     | common.assertions:assert_json_value:32 - Verify JSON value at 'page' is '2'
+2025-04-04 11:01:31.807 | INFO     | api_tests.test_users:test_list_users_page_2:77 - Test test_list_users_page_2 finished successfully.
+2025-04-04 11:01:31.810 | INFO     | api_tests.test_users:test_get_single_user_found:87 - Starting test: test_get_single_user_found
+2025-04-04 11:01:32.649 | INFO     | api_tests.test_users:test_get_single_user_found:94 - Asserting status code: expected=200, actual=200
+2025-04-04 11:01:32.650 | INFO     | api_tests.test_users:test_get_single_user_found:101 - Asserting response body structure and user ID
+2025-04-04 11:01:32.650 | INFO     | api_tests.test_users:test_get_single_user_found:110 - Test test_get_single_user_found finished successfully.
+2025-04-04 11:01:32.654 | INFO     | api_tests.test_users:test_get_single_user_not_found:121 - Starting test: test_get_single_user_not_found
+2025-04-04 11:01:33.515 | INFO     | api_tests.test_users:test_get_single_user_not_found:128 - Asserting status code: expected=404, actual=404
+2025-04-04 11:01:33.516 | INFO     | api_tests.test_users:test_get_single_user_not_found:133 - Asserting response body is empty
+2025-04-04 11:01:33.516 | INFO     | api_tests.test_users:test_get_single_user_not_found:142 - Test test_get_single_user_not_found finished successfully.
+2025-04-04 11:01:33.518 | INFO     | api_tests.test_users:test_create_user_data_driven:163 - Starting test: Create a user with role 'leader'
+2025-04-04 11:01:34.362 | INFO     | api_tests.test_users:test_create_user_data_driven:176 - Asserting status code: expected=201, actual=201
+2025-04-04 11:01:34.363 | INFO     | api_tests.test_users:test_create_user_data_driven:192 - Asserting successful response body
+2025-04-04 11:01:34.363 | INFO     | api_tests.test_users:test_create_user_data_driven:202 - User 'morpheus' seems to be created successfully. ID: 649
+2025-04-04 11:01:34.364 | INFO     | api_tests.test_users:test_create_user_data_driven:223 - Test 'Create a user with role 'leader'' finished.
+2025-04-04 11:01:34.366 | INFO     | api_tests.test_users:test_create_user_data_driven:163 - Starting test: Create a user with role 'the one'
+2025-04-04 11:01:35.177 | INFO     | api_tests.test_users:test_create_user_data_driven:176 - Asserting status code: expected=201, actual=201
+2025-04-04 11:01:35.179 | INFO     | api_tests.test_users:test_create_user_data_driven:192 - Asserting successful response body
+2025-04-04 11:01:35.179 | INFO     | api_tests.test_users:test_create_user_data_driven:202 - User 'neo' seems to be created successfully. ID: 437
+2025-04-04 11:01:35.180 | INFO     | api_tests.test_users:test_create_user_data_driven:223 - Test 'Create a user with role 'the one'' finished.
+2025-04-04 11:01:35.182 | INFO     | conftest:api_client:17 - --- Tearing down API Client Fixture (Session Scope) ---
+2025-04-04 11:07:18.035 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 11:07:18.086 | INFO     | api_tests.test_users:<module>:16 - Loading test data from: data/user_creation_data.yaml
+2025-04-04 11:07:18.100 | INFO     | conftest:api_client:11 - --- Initializing API Client Fixture (Session Scope) ---
+2025-04-04 11:07:18.105 | INFO     | core.api_client:__init__:16 - API Client initialized with base URL: https://reqres.in/api
+2025-04-04 11:07:18.106 | INFO     | api_tests.test_users:test_list_users_page_2:49 - Starting test: test_list_users_page_2
+2025-04-04 11:07:18.395 | INFO     | common.assertions:assert_status_code:15 - Verify response status code is 200
+2025-04-04 11:07:18.396 | INFO     | common.assertions:assert_json_keys_exist:54 - Verify JSON contains keys: ['page', 'per_page', 'total', 'total_pages', 'data']
+2025-04-04 11:07:18.397 | INFO     | common.assertions:assert_json_value:32 - Verify JSON value at 'page' is '2'
+2025-04-04 11:07:18.398 | INFO     | api_tests.test_users:test_list_users_page_2:77 - Test test_list_users_page_2 finished successfully.
+2025-04-04 11:07:18.400 | INFO     | api_tests.test_users:test_get_single_user_found:87 - Starting test: test_get_single_user_found
+2025-04-04 11:07:18.690 | INFO     | common.assertions:assert_status_code:15 - Verify response status code is 200
+2025-04-04 11:07:18.691 | INFO     | common.assertions:assert_json_keys_exist:54 - Verify JSON contains keys: ['data']
+2025-04-04 11:07:18.691 | INFO     | common.assertions:assert_json_value:32 - Verify JSON value at 'id' is '2'
+2025-04-04 11:07:18.937 | INFO     | api_tests.test_users:test_get_single_user_not_found:111 - Starting test: test_get_single_user_not_found
+2025-04-04 11:07:19.643 | INFO     | common.assertions:assert_status_code:15 - Verify response status code is 404
+2025-04-04 11:07:19.644 | INFO     | api_tests.test_users:test_get_single_user_not_found:123 - Test test_get_single_user_not_found finished successfully.
+2025-04-04 11:07:19.646 | INFO     | api_tests.test_users:test_create_user_data_driven:144 - Starting test: Create a user with role 'leader'
+2025-04-04 11:07:20.407 | INFO     | common.assertions:assert_status_code:15 - Verify response status code is 201
+2025-04-04 11:07:20.408 | INFO     | common.assertions:assert_payload_in_response:77 - Verify request payload values are reflected in response: ['name', 'job']
+2025-04-04 11:07:20.409 | INFO     | common.assertions:assert_json_keys_exist:54 - Verify JSON contains keys: ['name', 'job', 'id', 'createdAt']
+2025-04-04 11:07:20.409 | INFO     | api_tests.test_users:test_create_user_data_driven:163 - User 'morpheus' creation seems successful.
+2025-04-04 11:07:20.410 | INFO     | api_tests.test_users:test_create_user_data_driven:175 - Test 'Create a user with role 'leader'' finished.
+2025-04-04 11:07:20.413 | INFO     | api_tests.test_users:test_create_user_data_driven:144 - Starting test: Create a user with role 'the one'
+2025-04-04 11:07:21.204 | INFO     | common.assertions:assert_status_code:15 - Verify response status code is 201
+2025-04-04 11:07:21.205 | INFO     | common.assertions:assert_payload_in_response:77 - Verify request payload values are reflected in response: ['name', 'job']
+2025-04-04 11:07:21.205 | INFO     | common.assertions:assert_json_keys_exist:54 - Verify JSON contains keys: ['name', 'job', 'id', 'createdAt']
+2025-04-04 11:07:21.206 | INFO     | api_tests.test_users:test_create_user_data_driven:163 - User 'neo' creation seems successful.
+2025-04-04 11:07:21.206 | INFO     | api_tests.test_users:test_create_user_data_driven:175 - Test 'Create a user with role 'the one'' finished.
+2025-04-04 11:07:21.207 | INFO     | conftest:api_client:17 - --- Tearing down API Client Fixture (Session Scope) ---
+2025-04-04 11:28:37.372 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 11:28:37.452 | INFO     | api_tests.test_users:<module>:16 - Loading test data from: data/user_creation_data.yaml
+2025-04-04 11:28:37.467 | INFO     | conftest:api_client:11 - --- Initializing API Client Fixture (Session Scope) ---
+2025-04-04 11:28:37.470 | INFO     | core.api_client:__init__:16 - API Client initialized with base URL: https://reqres.in/api
+2025-04-04 11:28:37.471 | INFO     | api_tests.test_users:test_list_users_page_2:49 - Starting test: test_get_single_user_found
+2025-04-04 11:28:37.778 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 200
+2025-04-04 11:28:37.779 | INFO     | common.assertions:assert_json_keys_exist:97 - Verify JSON contains keys: ['data']
+2025-04-04 11:28:37.780 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.id' is '2'
+2025-04-04 11:28:37.780 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.email' is 'janet.weaver@reqres.in'
+2025-04-04 11:28:37.781 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.first_name' is 'Janet'
+2025-04-04 11:28:37.781 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.last_name' is 'Weaver'
+2025-04-04 11:28:37.782 | INFO     | api_tests.test_users:test_list_users_page_2:69 - Test test_list_users_page_2 finished successfully.
+2025-04-04 11:28:37.785 | INFO     | api_tests.test_users:test_get_single_user_found:79 - Starting test: test_get_single_user_found
+2025-04-04 11:28:38.071 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 200
+2025-04-04 11:28:38.072 | INFO     | common.assertions:assert_json_keys_exist:97 - Verify JSON contains keys: ['data']
+2025-04-04 11:28:38.072 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'id' is '2'
+2025-04-04 11:28:38.073 | ERROR    | common.assertions:assert_json_value:82 - An unexpected error occurred during JSON value assertion for path 'id': 'dict' object has no attribute 'json'
+Traceback (most recent call last):
+
+  File "D:\anaconda3\envs\AutoDemo\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <zipimporter object "D:\anaconda3\envs\AutoDemo\Sc...
+           │         └ <code object <module> at 0x00000236A5CDB9F0, file "D:\anaconda3\envs\AutoDemo\Scripts\pytest.exe\__main__.py", line 1>
+           └ <function _run_code at 0x00000236A5A323B0>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <zipimporter object "D:\anaconda3\envs\AutoDemo\Sc...
+         └ <code object <module> at 0x00000236A5CDB9F0, file "D:\anaconda3\envs\AutoDemo\Scripts\pytest.exe\__main__.py", line 1>
+
+  File "D:\anaconda3\envs\AutoDemo\Scripts\pytest.exe\__main__.py", line 7, in <module>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\config\__init__.py", line 201, in console_main
+    code = main()
+           └ <function main at 0x00000236A644BA30>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\config\__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+         │                │      │    │                          └ <_pytest.config.Config object at 0x00000236A6AB1810>
+         │                │      │    └ <HookCaller 'pytest_cmdline_main'>
+         │                │      └ <_pytest.config.compat.PathAwareHookProxy object at 0x00000236A6AB1F30>
+         │                └ <_pytest.config.Config object at 0x00000236A6AB1810>
+         └ <enum 'ExitCode'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           │    │         │    │     │    │                  │       └ True
+           │    │         │    │     │    │                  └ {'config': <_pytest.config.Config object at 0x00000236A6AB1810>}
+           │    │         │    │     │    └ <member '_hookimpls' of 'HookCaller' objects>
+           │    │         │    │     └ <HookCaller 'pytest_cmdline_main'>
+           │    │         │    └ <member 'name' of 'HookCaller' objects>
+           │    │         └ <HookCaller 'pytest_cmdline_main'>
+           │    └ <member '_hookexec' of 'HookCaller' objects>
+           └ <HookCaller 'pytest_cmdline_main'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           │    │               │          │        │       └ True
+           │    │               │          │        └ {'config': <_pytest.config.Config object at 0x00000236A6AB1810>}
+           │    │               │          └ [<HookImpl plugin_name='main', plugin=<module '_pytest.main' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_pytest...
+           │    │               └ 'pytest_cmdline_main'
+           │    └ <function _multicall at 0x00000236A60CDC60>
+           └ <_pytest.config.PytestPluginManager object at 0x00000236A5D29300>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<_pytest.config.Config object at 0x00000236A6AB1810>]
+          │         └ <member 'function' of 'HookImpl' objects>
+          └ <HookImpl plugin_name='main', plugin=<module '_pytest.main' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_pytest\...
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+           │            │       └ <function _main at 0x00000236A64A5120>
+           │            └ <_pytest.config.Config object at 0x00000236A6AB1810>
+           └ <function wrap_session at 0x00000236A64A5000>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+    │       │            │    │       └ <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=5>
+    │       │            │    └ <_pytest.config.Config object at 0x00000236A6AB1810>
+    │       │            └ <function _main at 0x00000236A64A5120>
+    │       └ <ExitCode.OK: 0>
+    └ <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=5>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+    │      │    │                          └ <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=5>
+    │      │    └ <HookCaller 'pytest_runtestloop'>
+    │      └ <_pytest.config.compat.PathAwareHookProxy object at 0x00000236A6AB1F30>
+    └ <_pytest.config.Config object at 0x00000236A6AB1810>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           │    │         │    │     │    │                  │       └ True
+           │    │         │    │     │    │                  └ {'session': <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=5>}
+           │    │         │    │     │    └ <member '_hookimpls' of 'HookCaller' objects>
+           │    │         │    │     └ <HookCaller 'pytest_runtestloop'>
+           │    │         │    └ <member 'name' of 'HookCaller' objects>
+           │    │         └ <HookCaller 'pytest_runtestloop'>
+           │    └ <member '_hookexec' of 'HookCaller' objects>
+           └ <HookCaller 'pytest_runtestloop'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           │    │               │          │        │       └ True
+           │    │               │          │        └ {'session': <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=5>}
+           │    │               │          └ [<HookImpl plugin_name='main', plugin=<module '_pytest.main' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_pytest...
+           │    │               └ 'pytest_runtestloop'
+           │    └ <function _multicall at 0x00000236A60CDC60>
+           └ <_pytest.config.PytestPluginManager object at 0x00000236A5D29300>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=5>]
+          │         └ <member 'function' of 'HookImpl' objects>
+          └ <HookImpl plugin_name='main', plugin=<module '_pytest.main' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_pytest\...
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+    │    │                                        │              └ <Function test_get_single_user_not_found>
+    │    │                                        └ <Function test_get_single_user_found>
+    │    └ <member 'config' of 'Node' objects>
+    └ <Function test_get_single_user_found>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           │    │         │    │     │    │                  │       └ True
+           │    │         │    │     │    │                  └ {'item': <Function test_get_single_user_found>, 'nextitem': <Function test_get_single_user_not_found>}
+           │    │         │    │     │    └ <member '_hookimpls' of 'HookCaller' objects>
+           │    │         │    │     └ <HookCaller 'pytest_runtest_protocol'>
+           │    │         │    └ <member 'name' of 'HookCaller' objects>
+           │    │         └ <HookCaller 'pytest_runtest_protocol'>
+           │    └ <member '_hookexec' of 'HookCaller' objects>
+           └ <HookCaller 'pytest_runtest_protocol'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           │    │               │          │        │       └ True
+           │    │               │          │        └ {'item': <Function test_get_single_user_found>, 'nextitem': <Function test_get_single_user_not_found>}
+           │    │               │          └ [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_py...
+           │    │               └ 'pytest_runtest_protocol'
+           │    └ <function _multicall at 0x00000236A60CDC60>
+           └ <_pytest.config.PytestPluginManager object at 0x00000236A5D29300>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<Function test_get_single_user_found>, <Function test_get_single_user_not_found>]
+          │         └ <member 'function' of 'HookImpl' objects>
+          └ <HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_pyt...
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+    │               │              └ <Function test_get_single_user_not_found>
+    │               └ <Function test_get_single_user_found>
+    └ <function runtestprotocol at 0x00000236A64A43A0>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+    │       │      │               │             └ True
+    │       │      │               └ <Function test_get_single_user_found>
+    │       │      └ <function call_and_report at 0x00000236A64A4790>
+    │       └ <method 'append' of 'list' objects>
+    └ [<TestReport 'api_tests/test_users.py::TestUsers::test_get_single_user_found' when='setup' outcome='passed'>]
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+           │        └ <classmethod(<function CallInfo.from_call at 0x00000236A64A4A60>)>
+           └ <class '_pytest.runner.CallInfo'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\runner.py", line 341, in from_call
+    result: TResult | None = func()
+            │                └ <function call_and_report.<locals>.<lambda> at 0x00000236A94070A0>
+            └ +TResult
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+            │                 │       └ {}
+            │                 └ <Function test_get_single_user_found>
+            └ <HookCaller 'pytest_runtest_call'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           │    │         │    │     │    │                  │       └ False
+           │    │         │    │     │    │                  └ {'item': <Function test_get_single_user_found>}
+           │    │         │    │     │    └ <member '_hookimpls' of 'HookCaller' objects>
+           │    │         │    │     └ <HookCaller 'pytest_runtest_call'>
+           │    │         │    └ <member 'name' of 'HookCaller' objects>
+           │    │         └ <HookCaller 'pytest_runtest_call'>
+           │    └ <member '_hookexec' of 'HookCaller' objects>
+           └ <HookCaller 'pytest_runtest_call'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           │    │               │          │        │       └ False
+           │    │               │          │        └ {'item': <Function test_get_single_user_found>}
+           │    │               │          └ [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_py...
+           │    │               └ 'pytest_runtest_call'
+           │    └ <function _multicall at 0x00000236A60CDC60>
+           └ <_pytest.config.PytestPluginManager object at 0x00000236A5D29300>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<Function test_get_single_user_found>]
+          │         └ <member 'function' of 'HookImpl' objects>
+          └ <HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_pyt...
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+    │    └ <function Function.runtest at 0x00000236A65DDBD0>
+    └ <Function test_get_single_user_found>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    │    │                                   └ <Function test_get_single_user_found>
+    │    └ <property object at 0x00000236A63573D0>
+    └ <Function test_get_single_user_found>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           │    │         │    │     │    │                  │       └ True
+           │    │         │    │     │    │                  └ {'pyfuncitem': <Function test_get_single_user_found>}
+           │    │         │    │     │    └ <member '_hookimpls' of 'HookCaller' objects>
+           │    │         │    │     └ <HookCaller 'pytest_pyfunc_call'>
+           │    │         │    └ <member 'name' of 'HookCaller' objects>
+           │    │         └ <HookCaller 'pytest_pyfunc_call'>
+           │    └ <member '_hookexec' of 'HookCaller' objects>
+           └ <HookCaller 'pytest_pyfunc_call'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           │    │               │          │        │       └ True
+           │    │               │          │        └ {'pyfuncitem': <Function test_get_single_user_found>}
+           │    │               │          └ [<HookImpl plugin_name='python', plugin=<module '_pytest.python' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_py...
+           │    │               └ 'pytest_pyfunc_call'
+           │    └ <function _multicall at 0x00000236A60CDC60>
+           └ <_pytest.config.PytestPluginManager object at 0x00000236A5D29300>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<Function test_get_single_user_found>]
+          │         └ <member 'function' of 'HookImpl' objects>
+          └ <HookImpl plugin_name='python', plugin=<module '_pytest.python' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_pyt...
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+             │              └ {'api_client': <core.api_client.ApiClient object at 0x00000236A948B130>}
+             └ <bound method TestUsers.test_get_single_user_found of <api_tests.test_users.TestUsers object at 0x00000236A948B340>>
+
+  File "D:\OneDrive\桌面\WebAutoTest\AutoDemo\api_tests\test_users.py", line 89, in test_get_single_user_found
+    assert_json_value(response.json()['data'], 'id', user_id) # 假设 data 必定存在
+    │                 │        │                     └ 2
+    │                 │        └ <function Response.json at 0x00000236A8809FC0>
+    │                 └ <Response [200]>
+    └ <function assert_json_value at 0x00000236A94067A0>
+
+> File "D:\OneDrive\桌面\WebAutoTest\AutoDemo\common\assertions.py", line 38, in assert_json_value
+    response_json = response.json()
+                    └ {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/f...
+
+AttributeError: 'dict' object has no attribute 'json'
+2025-04-04 11:28:38.391 | INFO     | api_tests.test_users:test_get_single_user_not_found:103 - Starting test: test_get_single_user_not_found
+2025-04-04 11:28:39.098 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 404
+2025-04-04 11:28:39.099 | INFO     | api_tests.test_users:test_get_single_user_not_found:115 - Test test_get_single_user_not_found finished successfully.
+2025-04-04 11:28:39.103 | INFO     | api_tests.test_users:test_create_user_data_driven:136 - Starting test: Create a user with role 'leader'
+2025-04-04 11:28:39.794 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 201
+2025-04-04 11:28:39.795 | INFO     | common.assertions:assert_payload_in_response:121 - Verify request payload values are reflected in response: ['name', 'job']
+2025-04-04 11:28:39.795 | INFO     | common.assertions:assert_json_keys_exist:97 - Verify JSON contains keys: ['name', 'job', 'id', 'createdAt']
+2025-04-04 11:28:39.796 | INFO     | api_tests.test_users:test_create_user_data_driven:155 - User 'morpheus' creation seems successful.
+2025-04-04 11:28:39.796 | INFO     | api_tests.test_users:test_create_user_data_driven:167 - Test 'Create a user with role 'leader'' finished.
+2025-04-04 11:28:39.800 | INFO     | api_tests.test_users:test_create_user_data_driven:136 - Starting test: Create a user with role 'the one'
+2025-04-04 11:28:40.501 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 201
+2025-04-04 11:28:40.502 | INFO     | common.assertions:assert_payload_in_response:121 - Verify request payload values are reflected in response: ['name', 'job']
+2025-04-04 11:28:40.502 | INFO     | common.assertions:assert_json_keys_exist:97 - Verify JSON contains keys: ['name', 'job', 'id', 'createdAt']
+2025-04-04 11:28:40.502 | INFO     | api_tests.test_users:test_create_user_data_driven:155 - User 'neo' creation seems successful.
+2025-04-04 11:28:40.503 | INFO     | api_tests.test_users:test_create_user_data_driven:167 - Test 'Create a user with role 'the one'' finished.
+2025-04-04 11:28:40.505 | INFO     | conftest:api_client:17 - --- Tearing down API Client Fixture (Session Scope) ---
+2025-04-04 11:32:30.612 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 11:32:30.661 | INFO     | api_tests.test_users:<module>:16 - Loading test data from: data/user_creation_data.yaml
+2025-04-04 11:32:30.680 | INFO     | conftest:api_client:11 - --- Initializing API Client Fixture (Session Scope) ---
+2025-04-04 11:32:30.684 | INFO     | core.api_client:__init__:16 - API Client initialized with base URL: https://reqres.in/api
+2025-04-04 11:32:30.686 | INFO     | api_tests.test_users:test_list_users_page_2:49 - Starting test: test_get_single_user_found
+2025-04-04 11:32:30.989 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 200
+2025-04-04 11:32:30.990 | INFO     | common.assertions:assert_json_keys_exist:97 - Verify JSON contains keys: ['data']
+2025-04-04 11:32:30.990 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.id' is '2'
+2025-04-04 11:32:30.991 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.email' is 'janet.weaver@reqres.in'
+2025-04-04 11:32:30.991 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.first_name' is 'Janet'
+2025-04-04 11:32:30.992 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.last_name' is 'Weaver'
+2025-04-04 11:32:30.992 | INFO     | api_tests.test_users:test_list_users_page_2:69 - Test test_list_users_page_2 finished successfully.
+2025-04-04 11:32:30.995 | INFO     | api_tests.test_users:test_get_single_user_found:79 - Starting test: test_get_single_user_found
+2025-04-04 11:32:31.311 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 200
+2025-04-04 11:32:31.312 | INFO     | common.assertions:assert_json_keys_exist:97 - Verify JSON contains keys: ['data']
+2025-04-04 11:32:31.313 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'id' is '2'
+2025-04-04 11:32:31.314 | ERROR    | common.assertions:assert_json_value:82 - An unexpected error occurred during JSON value assertion for path 'id': 'dict' object has no attribute 'json'
+Traceback (most recent call last):
+
+  File "D:\anaconda3\envs\AutoDemo\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <zipimporter object "D:\anaconda3\envs\AutoDemo\Sc...
+           │         └ <code object <module> at 0x000001D26A3CB9F0, file "D:\anaconda3\envs\AutoDemo\Scripts\pytest.exe\__main__.py", line 1>
+           └ <function _run_code at 0x000001D26A1223B0>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <zipimporter object "D:\anaconda3\envs\AutoDemo\Sc...
+         └ <code object <module> at 0x000001D26A3CB9F0, file "D:\anaconda3\envs\AutoDemo\Scripts\pytest.exe\__main__.py", line 1>
+
+  File "D:\anaconda3\envs\AutoDemo\Scripts\pytest.exe\__main__.py", line 7, in <module>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\config\__init__.py", line 201, in console_main
+    code = main()
+           └ <function main at 0x000001D26AB2BA30>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\config\__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+         │                │      │    │                          └ <_pytest.config.Config object at 0x000001D26B191810>
+         │                │      │    └ <HookCaller 'pytest_cmdline_main'>
+         │                │      └ <_pytest.config.compat.PathAwareHookProxy object at 0x000001D26B191F30>
+         │                └ <_pytest.config.Config object at 0x000001D26B191810>
+         └ <enum 'ExitCode'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           │    │         │    │     │    │                  │       └ True
+           │    │         │    │     │    │                  └ {'config': <_pytest.config.Config object at 0x000001D26B191810>}
+           │    │         │    │     │    └ <member '_hookimpls' of 'HookCaller' objects>
+           │    │         │    │     └ <HookCaller 'pytest_cmdline_main'>
+           │    │         │    └ <member 'name' of 'HookCaller' objects>
+           │    │         └ <HookCaller 'pytest_cmdline_main'>
+           │    └ <member '_hookexec' of 'HookCaller' objects>
+           └ <HookCaller 'pytest_cmdline_main'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           │    │               │          │        │       └ True
+           │    │               │          │        └ {'config': <_pytest.config.Config object at 0x000001D26B191810>}
+           │    │               │          └ [<HookImpl plugin_name='main', plugin=<module '_pytest.main' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_pytest...
+           │    │               └ 'pytest_cmdline_main'
+           │    └ <function _multicall at 0x000001D26A7BDC60>
+           └ <_pytest.config.PytestPluginManager object at 0x000001D26A419300>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<_pytest.config.Config object at 0x000001D26B191810>]
+          │         └ <member 'function' of 'HookImpl' objects>
+          └ <HookImpl plugin_name='main', plugin=<module '_pytest.main' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_pytest\...
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+           │            │       └ <function _main at 0x000001D26AB85120>
+           │            └ <_pytest.config.Config object at 0x000001D26B191810>
+           └ <function wrap_session at 0x000001D26AB85000>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+    │       │            │    │       └ <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=5>
+    │       │            │    └ <_pytest.config.Config object at 0x000001D26B191810>
+    │       │            └ <function _main at 0x000001D26AB85120>
+    │       └ <ExitCode.OK: 0>
+    └ <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=5>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+    │      │    │                          └ <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=5>
+    │      │    └ <HookCaller 'pytest_runtestloop'>
+    │      └ <_pytest.config.compat.PathAwareHookProxy object at 0x000001D26B191F30>
+    └ <_pytest.config.Config object at 0x000001D26B191810>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           │    │         │    │     │    │                  │       └ True
+           │    │         │    │     │    │                  └ {'session': <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=5>}
+           │    │         │    │     │    └ <member '_hookimpls' of 'HookCaller' objects>
+           │    │         │    │     └ <HookCaller 'pytest_runtestloop'>
+           │    │         │    └ <member 'name' of 'HookCaller' objects>
+           │    │         └ <HookCaller 'pytest_runtestloop'>
+           │    └ <member '_hookexec' of 'HookCaller' objects>
+           └ <HookCaller 'pytest_runtestloop'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           │    │               │          │        │       └ True
+           │    │               │          │        └ {'session': <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=5>}
+           │    │               │          └ [<HookImpl plugin_name='main', plugin=<module '_pytest.main' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_pytest...
+           │    │               └ 'pytest_runtestloop'
+           │    └ <function _multicall at 0x000001D26A7BDC60>
+           └ <_pytest.config.PytestPluginManager object at 0x000001D26A419300>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=5>]
+          │         └ <member 'function' of 'HookImpl' objects>
+          └ <HookImpl plugin_name='main', plugin=<module '_pytest.main' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_pytest\...
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+    │    │                                        │              └ <Function test_get_single_user_not_found>
+    │    │                                        └ <Function test_get_single_user_found>
+    │    └ <member 'config' of 'Node' objects>
+    └ <Function test_get_single_user_found>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           │    │         │    │     │    │                  │       └ True
+           │    │         │    │     │    │                  └ {'item': <Function test_get_single_user_found>, 'nextitem': <Function test_get_single_user_not_found>}
+           │    │         │    │     │    └ <member '_hookimpls' of 'HookCaller' objects>
+           │    │         │    │     └ <HookCaller 'pytest_runtest_protocol'>
+           │    │         │    └ <member 'name' of 'HookCaller' objects>
+           │    │         └ <HookCaller 'pytest_runtest_protocol'>
+           │    └ <member '_hookexec' of 'HookCaller' objects>
+           └ <HookCaller 'pytest_runtest_protocol'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           │    │               │          │        │       └ True
+           │    │               │          │        └ {'item': <Function test_get_single_user_found>, 'nextitem': <Function test_get_single_user_not_found>}
+           │    │               │          └ [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_py...
+           │    │               └ 'pytest_runtest_protocol'
+           │    └ <function _multicall at 0x000001D26A7BDC60>
+           └ <_pytest.config.PytestPluginManager object at 0x000001D26A419300>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<Function test_get_single_user_found>, <Function test_get_single_user_not_found>]
+          │         └ <member 'function' of 'HookImpl' objects>
+          └ <HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_pyt...
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+    │               │              └ <Function test_get_single_user_not_found>
+    │               └ <Function test_get_single_user_found>
+    └ <function runtestprotocol at 0x000001D26AB843A0>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+    │       │      │               │             └ True
+    │       │      │               └ <Function test_get_single_user_found>
+    │       │      └ <function call_and_report at 0x000001D26AB84790>
+    │       └ <method 'append' of 'list' objects>
+    └ [<TestReport 'api_tests/test_users.py::TestUsers::test_get_single_user_found' when='setup' outcome='passed'>]
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+           │        └ <classmethod(<function CallInfo.from_call at 0x000001D26AB84A60>)>
+           └ <class '_pytest.runner.CallInfo'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\runner.py", line 341, in from_call
+    result: TResult | None = func()
+            │                └ <function call_and_report.<locals>.<lambda> at 0x000001D26DAE30A0>
+            └ +TResult
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+            │                 │       └ {}
+            │                 └ <Function test_get_single_user_found>
+            └ <HookCaller 'pytest_runtest_call'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           │    │         │    │     │    │                  │       └ False
+           │    │         │    │     │    │                  └ {'item': <Function test_get_single_user_found>}
+           │    │         │    │     │    └ <member '_hookimpls' of 'HookCaller' objects>
+           │    │         │    │     └ <HookCaller 'pytest_runtest_call'>
+           │    │         │    └ <member 'name' of 'HookCaller' objects>
+           │    │         └ <HookCaller 'pytest_runtest_call'>
+           │    └ <member '_hookexec' of 'HookCaller' objects>
+           └ <HookCaller 'pytest_runtest_call'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           │    │               │          │        │       └ False
+           │    │               │          │        └ {'item': <Function test_get_single_user_found>}
+           │    │               │          └ [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_py...
+           │    │               └ 'pytest_runtest_call'
+           │    └ <function _multicall at 0x000001D26A7BDC60>
+           └ <_pytest.config.PytestPluginManager object at 0x000001D26A419300>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<Function test_get_single_user_found>]
+          │         └ <member 'function' of 'HookImpl' objects>
+          └ <HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_pyt...
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+    │    └ <function Function.runtest at 0x000001D26ACBDBD0>
+    └ <Function test_get_single_user_found>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    │    │                                   └ <Function test_get_single_user_found>
+    │    └ <property object at 0x000001D26AA373D0>
+    └ <Function test_get_single_user_found>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           │    │         │    │     │    │                  │       └ True
+           │    │         │    │     │    │                  └ {'pyfuncitem': <Function test_get_single_user_found>}
+           │    │         │    │     │    └ <member '_hookimpls' of 'HookCaller' objects>
+           │    │         │    │     └ <HookCaller 'pytest_pyfunc_call'>
+           │    │         │    └ <member 'name' of 'HookCaller' objects>
+           │    │         └ <HookCaller 'pytest_pyfunc_call'>
+           │    └ <member '_hookexec' of 'HookCaller' objects>
+           └ <HookCaller 'pytest_pyfunc_call'>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           │    │               │          │        │       └ True
+           │    │               │          │        └ {'pyfuncitem': <Function test_get_single_user_found>}
+           │    │               │          └ [<HookImpl plugin_name='python', plugin=<module '_pytest.python' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_py...
+           │    │               └ 'pytest_pyfunc_call'
+           │    └ <function _multicall at 0x000001D26A7BDC60>
+           └ <_pytest.config.PytestPluginManager object at 0x000001D26A419300>
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<Function test_get_single_user_found>]
+          │         └ <member 'function' of 'HookImpl' objects>
+          └ <HookImpl plugin_name='python', plugin=<module '_pytest.python' from 'D:\\anaconda3\\envs\\AutoDemo\\lib\\site-packages\\_pyt...
+
+  File "D:\anaconda3\envs\AutoDemo\lib\site-packages\_pytest\python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+             │              └ {'api_client': <core.api_client.ApiClient object at 0x000001D26DB56CB0>}
+             └ <bound method TestUsers.test_get_single_user_found of <api_tests.test_users.TestUsers object at 0x000001D26DB57760>>
+
+  File "D:\OneDrive\桌面\WebAutoTest\AutoDemo\api_tests\test_users.py", line 89, in test_get_single_user_found
+    assert_json_value(response.json()['data'], 'id', user_id) # 假设 data 必定存在
+    │                 │        │                     └ 2
+    │                 │        └ <function Response.json at 0x000001D26CEE5FC0>
+    │                 └ <Response [200]>
+    └ <function assert_json_value at 0x000001D26DAE27A0>
+
+> File "D:\OneDrive\桌面\WebAutoTest\AutoDemo\common\assertions.py", line 38, in assert_json_value
+    response_json = response.json()
+                    └ {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/f...
+
+AttributeError: 'dict' object has no attribute 'json'
+2025-04-04 11:32:31.627 | INFO     | api_tests.test_users:test_get_single_user_not_found:103 - Starting test: test_get_single_user_not_found
+2025-04-04 11:32:32.333 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 404
+2025-04-04 11:32:32.334 | INFO     | api_tests.test_users:test_get_single_user_not_found:115 - Test test_get_single_user_not_found finished successfully.
+2025-04-04 11:32:32.336 | INFO     | api_tests.test_users:test_create_user_data_driven:136 - Starting test: Create a user with role 'leader'
+2025-04-04 11:32:33.315 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 201
+2025-04-04 11:32:33.315 | INFO     | common.assertions:assert_payload_in_response:121 - Verify request payload values are reflected in response: ['name', 'job']
+2025-04-04 11:32:33.316 | INFO     | common.assertions:assert_json_keys_exist:97 - Verify JSON contains keys: ['name', 'job', 'id', 'createdAt']
+2025-04-04 11:32:33.316 | INFO     | api_tests.test_users:test_create_user_data_driven:155 - User 'morpheus' creation seems successful.
+2025-04-04 11:32:33.317 | INFO     | api_tests.test_users:test_create_user_data_driven:167 - Test 'Create a user with role 'leader'' finished.
+2025-04-04 11:32:33.319 | INFO     | api_tests.test_users:test_create_user_data_driven:136 - Starting test: Create a user with role 'the one'
+2025-04-04 11:32:34.046 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 201
+2025-04-04 11:32:34.047 | INFO     | common.assertions:assert_payload_in_response:121 - Verify request payload values are reflected in response: ['name', 'job']
+2025-04-04 11:32:34.048 | INFO     | common.assertions:assert_json_keys_exist:97 - Verify JSON contains keys: ['name', 'job', 'id', 'createdAt']
+2025-04-04 11:32:34.048 | INFO     | api_tests.test_users:test_create_user_data_driven:155 - User 'neo' creation seems successful.
+2025-04-04 11:32:34.049 | INFO     | api_tests.test_users:test_create_user_data_driven:167 - Test 'Create a user with role 'the one'' finished.
+2025-04-04 11:32:34.051 | INFO     | conftest:api_client:17 - --- Tearing down API Client Fixture (Session Scope) ---
+2025-04-04 11:34:25.709 | INFO     | common.logger:setup_logger:43 - Logger setup complete.
+2025-04-04 11:34:25.760 | INFO     | api_tests.test_users:<module>:16 - Loading test data from: data/user_creation_data.yaml
+2025-04-04 11:34:25.772 | INFO     | conftest:api_client:11 - --- Initializing API Client Fixture (Session Scope) ---
+2025-04-04 11:34:25.776 | INFO     | core.api_client:__init__:16 - API Client initialized with base URL: https://reqres.in/api
+2025-04-04 11:34:25.778 | INFO     | api_tests.test_users:test_list_users_page_2:49 - Starting test: test_get_single_user_found
+2025-04-04 11:34:26.064 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 200
+2025-04-04 11:34:26.065 | INFO     | common.assertions:assert_json_keys_exist:97 - Verify JSON contains keys: ['data']
+2025-04-04 11:34:26.066 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.id' is '2'
+2025-04-04 11:34:26.066 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.email' is 'janet.weaver@reqres.in'
+2025-04-04 11:34:26.067 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.first_name' is 'Janet'
+2025-04-04 11:34:26.067 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.last_name' is 'Weaver'
+2025-04-04 11:34:26.068 | INFO     | api_tests.test_users:test_list_users_page_2:69 - Test test_list_users_page_2 finished successfully.
+2025-04-04 11:34:26.069 | INFO     | api_tests.test_users:test_get_single_user_found:79 - Starting test: test_get_single_user_found
+2025-04-04 11:34:26.359 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 200
+2025-04-04 11:34:26.360 | INFO     | common.assertions:assert_json_keys_exist:97 - Verify JSON contains keys: ['data']
+2025-04-04 11:34:26.361 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.id' is '2'
+2025-04-04 11:34:26.362 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.email' is 'janet.weaver@reqres.in'
+2025-04-04 11:34:26.362 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.first_name' is 'Janet'
+2025-04-04 11:34:26.363 | INFO     | common.assertions:assert_json_value:35 - Verify JSON value at path 'data.last_name' is 'Weaver'
+2025-04-04 11:34:26.363 | INFO     | api_tests.test_users:test_get_single_user_found:97 - Test test_get_single_user_found finished successfully.
+2025-04-04 11:34:26.366 | INFO     | api_tests.test_users:test_get_single_user_not_found:108 - Starting test: test_get_single_user_not_found
+2025-04-04 11:34:26.671 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 404
+2025-04-04 11:34:26.672 | INFO     | api_tests.test_users:test_get_single_user_not_found:120 - Test test_get_single_user_not_found finished successfully.
+2025-04-04 11:34:26.675 | INFO     | api_tests.test_users:test_create_user_data_driven:141 - Starting test: Create a user with role 'leader'
+2025-04-04 11:34:27.381 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 201
+2025-04-04 11:34:27.382 | INFO     | common.assertions:assert_payload_in_response:121 - Verify request payload values are reflected in response: ['name', 'job']
+2025-04-04 11:34:27.382 | INFO     | common.assertions:assert_json_keys_exist:97 - Verify JSON contains keys: ['name', 'job', 'id', 'createdAt']
+2025-04-04 11:34:27.383 | INFO     | api_tests.test_users:test_create_user_data_driven:160 - User 'morpheus' creation seems successful.
+2025-04-04 11:34:27.383 | INFO     | api_tests.test_users:test_create_user_data_driven:172 - Test 'Create a user with role 'leader'' finished.
+2025-04-04 11:34:27.386 | INFO     | api_tests.test_users:test_create_user_data_driven:141 - Starting test: Create a user with role 'the one'
+2025-04-04 11:34:28.112 | INFO     | common.assertions:assert_status_code:17 - Verify response status code is 201
+2025-04-04 11:34:28.113 | INFO     | common.assertions:assert_payload_in_response:121 - Verify request payload values are reflected in response: ['name', 'job']
+2025-04-04 11:34:28.114 | INFO     | common.assertions:assert_json_keys_exist:97 - Verify JSON contains keys: ['name', 'job', 'id', 'createdAt']
+2025-04-04 11:34:28.114 | INFO     | api_tests.test_users:test_create_user_data_driven:160 - User 'neo' creation seems successful.
+2025-04-04 11:34:28.114 | INFO     | api_tests.test_users:test_create_user_data_driven:172 - Test 'Create a user with role 'the one'' finished.
+2025-04-04 11:34:28.115 | INFO     | conftest:api_client:17 - --- Tearing down API Client Fixture (Session Scope) ---

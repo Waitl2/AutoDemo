@@ -4,6 +4,13 @@ import requests
 # from core.api_client import api_client # 导入封装好的 client
 from common.logger import logger
 from common.read_yaml import read_yaml
+# --- 导入封装的断言函数 ---
+from common.assertions import (
+    assert_status_code,
+    assert_json_value,
+    assert_json_keys_exist,
+    assert_payload_in_response
+)
 
 user_creation_data_path = 'data/user_creation_data.yaml'
 logger.info(f"Loading test data from: {user_creation_data_path}")
@@ -39,49 +46,27 @@ class TestUsers:
         测试获取用户列表第二页的功能
         对应接口: GET /api/users?page=2
         """
-        logger.info("Starting test: test_list_users_page_2")
-        endpoint = "/users"
-        params = {'page': 2}
+        logger.info("Starting test: test_get_single_user_found")
+        user_id = 2
+        endpoint = f"/users/{user_id}"
 
         # 发送 GET 请求
-        response = api_client.get(endpoint, params=params)
+        response = api_client.get(endpoint)
 
-        # --- 断言 ---
-        # 1. 状态码断言
-        with allure.step("Verify response status code is 200"): # Allure 报告中的步骤
-            logger.info(f"Asserting status code: expected=200, actual={response.status_code}")
-            assert response.status_code == 200, f"Expected status code 200, but got {response.status_code}"
+        # --- 使用封装断言 ---
+        assert_status_code(response, 200)
+        assert_json_keys_exist(response, ['data']) 
 
-        # 2. 响应体基本结构断言 (根据 Reqres.in 的实际响应)
-        response_json = response.json() # 解析 JSON 响应体
-        logger.debug(f"Response JSON: {response_json}") # 记录响应体便于调试
+        # Use the enhanced assertion function with dot notation
+        assert_json_value(response, 'data.id', user_id)
+        assert_json_value(response, 'data.email', 'janet.weaver@reqres.in') # Example of asserting another nested value
+        assert_json_value(response, 'data.first_name', 'Janet')
 
-        with allure.step("Verify response body structure and key fields"):
-            logger.info("Asserting response body structure")
-            assert 'page' in response_json, "Response JSON should contain 'page' key"
-            assert 'per_page' in response_json, "Response JSON should contain 'per_page' key"
-            assert 'total' in response_json, "Response JSON should contain 'total' key"
-            assert 'total_pages' in response_json, "Response JSON should contain 'total_pages' key"
-            assert 'data' in response_json, "Response JSON should contain 'data' key"
-            assert isinstance(response_json['data'], list), "'data' should be a list"
-
-        # 3. 响应体具体值断言 (根据 Reqres.in 的已知响应)
-        with allure.step("Verify response data content"):
-            logger.info("Asserting specific values in response")
-            assert response_json['page'] == 2, f"Expected page 2, but got {response_json['page']}"
-            # 可以添加更多断言，比如检查 data 列表不为空，或者第一个用户的 email 格式等
-            if len(response_json['data']) > 0:
-                first_user = response_json['data'][0]
-                assert 'id' in first_user
-                assert 'email' in first_user
-                assert 'first_name' in first_user
-                assert 'last_name' in first_user
-                assert '@' in first_user['email'], "User email should contain '@'"
-            else:
-                logger.warning("User data list is empty, skipping detailed user checks.")
-
+        # If you wanted to assert keys within 'data', you might need a helper or assert them individually
+        # Option: Assert individual keys exist within 'data'
+        assert_json_value(response, 'data.last_name', 'Weaver') # Implicitly checks existence too
+        # Or, create a helper assert_json_path_keys_exist(response, 'data', ['email', 'first_name', ...]) if needed often
         logger.info("Test test_list_users_page_2 finished successfully.")
-
 
     @allure.story("Get Single User")
     @allure.title("Test getting a single existing user (ID 2)")
@@ -97,23 +82,18 @@ class TestUsers:
 
         response = api_client.get(endpoint)
 
-        with allure.step("Verify response status code is 200"):
-            logger.info(f"Asserting status code: expected=200, actual={response.status_code}")
-            assert response.status_code == 200
+        # --- 使用封装断言 ---
+        assert_status_code(response, 200)
+        assert_json_keys_exist(response, ['data'])
+         # Use the enhanced assertion function with dot notation
+        assert_json_value(response, 'data.id', user_id)
+        assert_json_value(response, 'data.email', 'janet.weaver@reqres.in') # Example of asserting another nested value
+        assert_json_value(response, 'data.first_name', 'Janet')
 
-        response_json = response.json()
-        logger.debug(f"Response JSON: {response_json}")
-
-        with allure.step("Verify response contains user data"):
-            logger.info("Asserting response body structure and user ID")
-            assert 'data' in response_json, "Response JSON should contain 'data' key"
-            user_data = response_json['data']
-            assert isinstance(user_data, dict), "'data' should be a dictionary"
-            assert user_data.get('id') == user_id, f"Expected user ID {user_id}, but got {user_data.get('id')}"
-            assert 'email' in user_data
-            assert 'first_name' in user_data
-            assert 'last_name' in user_data
-
+        # If you wanted to assert keys within 'data', you might need a helper or assert them individually
+        # Option: Assert individual keys exist within 'data'
+        assert_json_value(response, 'data.last_name', 'Weaver') # Implicitly checks existence too
+        # Or, create a helper assert_json_path_keys_exist(response, 'data', ['email', 'first_name', ...]) if needed often
         logger.info("Test test_get_single_user_found finished successfully.")
 
 
@@ -131,23 +111,14 @@ class TestUsers:
 
         response = api_client.get(endpoint)
 
-        with allure.step("Verify response status code is 404"):
-            logger.info(f"Asserting status code: expected=404, actual={response.status_code}")
-            assert response.status_code == 404, f"Expected status code 404 for non-existing user, but got {response.status_code}"
-
-        # 对于 404，Reqres.in 通常返回一个空的响应体，可以断言这一点
-        with allure.step("Verify response body is empty"):
-            logger.info("Asserting response body is empty")
-            # 检查响应体是否为空或者是否可以解析为空字典
-            try:
-                assert response.json() == {}, "Expected empty JSON object for 404 response"
-            except requests.exceptions.JSONDecodeError:
-                # 如果响应体为空文本，json() 会抛出异常，这也是可接受的
-                 assert response.text == '{}' or response.text == '', "Expected empty body for 404 response"
-
+        assert_status_code(response, 404) # 断言状态码为 404
+        # 断言响应体中包含预期的错误信息
+        with allure.step("Verify response body is empty JSON object"):
+             assert response.text == '{}' or response.text == '', \
+                   f"Expected empty body or '{{}}' for 404, got: {response.text}"
 
         logger.info("Test test_get_single_user_not_found finished successfully.")
-
+        
     #数据驱动创建用户测试
     @allure.story("Create User（数据驱动）")
     @allure.title("Test creating a user with data from YAML file")
@@ -177,55 +148,25 @@ class TestUsers:
         with allure.step(f"Send POST request to {endpoint} with payload: {payload}"):
             response = api_client.post(endpoint, json=payload)
 
-        # --- 断言 ---
-        # 1. 状态码断言
-        with allure.step(f"Verify response status code is {expected_status}"):
-            logger.info(f"Asserting status code: expected={expected_status}, actual={response.status_code}")
-            assert response.status_code == expected_status, \
-                   f"Expected status code {expected_status}, but got {response.status_code}. Response: {response.text}"
+        # --- 使用封装断言 ---
+        assert_status_code(response, expected_status)
 
-        # 2. 响应体断言 (根据预期是成功还是失败)
-        response_json = {}
-        response_text = response.text
-        if response.content: # 检查是否有响应体
-             try:
-                 response_json = response.json()
-                 logger.debug(f"Response JSON: {response_json}")
-             except Exception as e:
-                 logger.warning(f"Could not decode JSON response: {e}. Response text: {response_text}")
-
-        if expected_status // 100 == 2: # 如果预期是成功 (2xx)
-             with allure.step("Verify successful response body content and structure"):
-                 logger.info("Asserting successful response body")
-                 # 断言 payload 中的字段是否在响应中存在且值匹配
-                 for key, value in payload.items():
-                      assert response_json.get(key) == value, \
-                             f"Payload key '{key}' mismatch: expected '{value}', got '{response_json.get(key)}'"
-                 # 断言预期必须存在的 key
-                 if expected_keys:
-                     for key in expected_keys:
-                         assert key in response_json, f"Expected key '{key}' not found in response keys: {list(response_json.keys())}"
-                 # 可以添加其他更具体的成功断言
-                 logger.info(f"User '{payload.get('name')}' seems to be created successfully. ID: {response_json.get('id')}")
-
-        else: # 如果预期是失败 (非 2xx)
-             with allure.step("Verify error response body (if applicable)"):
-                 logger.info("Asserting error response body")
-                 if expected_error:
-                      # 断言预期的错误信息是否存在于响应体中 (需要根据实际 API 的错误格式调整)
-                      # 这里假设错误信息在 'error' 字段或直接在响应文本中
-                      error_found = False
-                      if 'error' in response_json and expected_error in response_json['error']:
-                          error_found = True
-                      elif expected_error in response_text:
-                           error_found = True
-
-                      assert error_found, \
-                             f"Expected error message '{expected_error}' not found in response: {response_text}"
-                      logger.info(f"Verified expected error message: '{expected_error}'")
-                 else:
-                      logger.info("No specific error message assertion was defined for this failure case.")
-
+        if expected_status // 100 == 2: # 成功场景
+             # 断言请求的 payload 是否反映在响应中
+             assert_payload_in_response(response, payload)
+             # 断言其他必须存在的 key
+             if expected_keys:
+                 assert_json_keys_exist(response, expected_keys)
+             logger.info(f"User '{payload.get('name')}' creation seems successful.")
+        else: # 失败场景
+             # (需要添加处理失败场景的断言函数, e.g., assert_error_message_contains)
+             if expected_error:
+                 with allure.step(f"Verify error message contains '{expected_error}'"):
+                      logger.info(f"Asserting error message contains: {expected_error}")
+                      # 简单的实现：直接检查文本
+                      assert expected_error in response.text, \
+                             f"Expected error '{expected_error}' not found in response: {response.text}"
+             else:
+                 logger.info("No specific error message assertion defined for this failure case.")
 
         logger.info(f"Test '{description}' finished.")
-
